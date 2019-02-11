@@ -79,4 +79,6 @@ Server Version: version.Info{Major:"1", Minor:"11+", GitVersion:"v1.11.6-gke.2",
 
 If we see `error: You must be logged in to the server (the server has asked for the client to provide credentials)` or we don't see a client and a server version, then check the syntax of the modified yaml file, it's possible a formatting error was made.
 
-This sanity check must pass before moving onto the next lab. Raise your hand if you're unsure whether or not your instance is ready.
+This sanity check must pass before moving onto the next lab. Raise your hand if you're unsure whether or not your instance is ready. The example below shows both good and bad responses.
+
+![Good and Bad](lab-02/images/img06d.png)
