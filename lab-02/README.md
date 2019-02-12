@@ -77,8 +77,28 @@ Server Version: version.Info{Major:"1", Minor:"11+", GitVersion:"v1.11.6-gke.2",
 19:46Z", GoVersion:"go1.10.3b4", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
-If we see `error: You must be logged in to the server (the server has asked for the client to provide credentials)` or we don't see a client and a server version, then check the syntax of the modified yaml file, it's possible a formatting error was made.
+If you see `error: You must be logged in to the server (the server has asked for the client to provide credentials)` or you don't see a client and a server version, then check the syntax of the modified yaml file, it's possible a formatting error was made.
 
 This sanity check must pass before moving onto the next lab. Raise your hand if you're unsure whether or not your instance is ready. The example below shows both good and bad responses.
 
 ![Good and Bad](lab-02/images/img06d.png)
+
+7. Once you've confirmed that the modifications to `~/.kube/config` are valid, you can run the [cluster setup script](https://gitlab.com/opentracing-workshop/build-tools/blob/master/bin/setup-cluster). Run the following command in the Cloud Shell window: `docker run --rm -it -v "$HOME/.kube:/root/.kube" registry.gitlab.com/opentracing-workshop/build-tools:latest setup-cluster`. This script will take 2-3 minutes to complete, do not close the window or interrupt the script during the execution. If you encounter an error, stop here and raise your hand.
+
+You should see a screen like this:
+
+![Cluster Setup Success](lab-02/images/img07.png)
+
+8. For the final task in this lab, we'll be exporting keys and tokens that Gitlab will use to configure and ship our microservice applications. The next command you'll run is: `docker run --rm -it -v "$HOME/.kube:/root/.kube" registry.gitlab.com/opentracing-workshop/build-tools:latest get-gitlab-settings deploy --namespace=spc > gitlab-creds.txt`
+
+Once this command has executed, you'll need to open the file browser again to view this file. !IMPORTANT! You cannot use Vim or an in-shell editor for this step, as the copy/paste command wrecks the token format.
+
+Copy the contents of `gitlab-creds.txt` to a text file, beware of OSX Notes or anything which messes with formatting, I suggest using vscode, sublime text, etc.
+
+![Gitlab Creds](lab-02/images/img08.png)
+
+That's it for lab 02, in the next lab we'll be setting up Gitlab and deploying our first microservice application.
+
+
+
+
