@@ -53,3 +53,25 @@ Let's create the merge request, so head back to Gitlab and follow these steps.
 ![Submit Merge Request](lab-04/images/img04a.png)
 
 5. Code Review Time!
+
+Click on the `Changes (n)` tab to reveal the modifications we're making to our microservice application. There are a number of duplicated changes we won't be covering, but we will go into detail on each unique change and explain what we're doing to enable our applications for observability.
+
+The first change you should see is to the `helm/spring-petclinic-database-server/values.yaml` file. This file contains the configuration for the `mysql` helm chart deployment. Let's examine the changes.
+
+* a. [Helm Repository - MySQL](https://github.com/helm/charts/tree/master/stable/mysql) - We're configuring MySQL to run a [sidecar pod](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/) that will collect metrics from MySQL and export them via a prometheus endpoint.
+* b. This is the magic sauce in the [prometheus operator](https://github.com/coreos/prometheus-operator). This annotation tells prometheus that it should collect metrics from this service.
+
+![MySQL Helm Review](lab-04/images/img05a.png)
+
+The next change we'll be reviewing is to the `helm/spring-petclinic-kubernetes/templates/deployment.yaml` manifest. This manifest is used across all the spring petclinic microservices, which is the real power behind helm since it can be used to reduce config duplication.
+
+You can see below that we're adding multiple environment values to the template, which will be applied to each service so long `jaeger.enabled == true` in the corresponding service `values.yaml` file (we'll see that later in the review). Now, within the last month or two the Jaeger Tracing operator has matured quite a bit and it's worth looking at that pattern (similiar to prometheus) for deployment. Within the next month or two this workshop will be updated to utilize that technology. For now, let's break each of these variables:
+
+* `SPRING_PROFILES_ACTIVE == jaegertracing` - This setting enables our bootstrap method in our services, and indicates we're using the jaeger client to export trace spans and logs
+* `JAEGER_ENDPOINT == jaegerUrl` - This is the internal endpoint which is used by the jaeger client within our services to send data
+* `JAEGER_SAMPLER_TYPE == const` - We'll collect every trace for now, for production systems that handle thousands of requests per minute (or more) this will likely cause issues due to the overhead of this implementation
+* `JAEGER_SAMPLER_PARAM == 1` - This would be set to a more reasonable number such as `1000` in high-load production systems, which would mean one out of every thousand requests would be recorded
+* `JAEGER_REPORTER_LOG_SPANS == false` - This is a good troubleshooting tool, but logging spans creates additional overhead to stdout
+* `JAEGER_SERVICE_NAME == {{ .Release.Name }}` - Populates the service name value from the Helm service template
+
+![Spring Petclinic Helm Chart Review](lab-04/images/img05b.png)
