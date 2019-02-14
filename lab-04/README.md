@@ -71,7 +71,45 @@ You can see below that we're adding multiple environment values to the template,
 * `JAEGER_ENDPOINT == jaegerUrl` - This is the internal endpoint which is used by the jaeger client within our services to send data
 * `JAEGER_SAMPLER_TYPE == const` - We'll collect every trace for now, for production systems that handle thousands of requests per minute (or more) this will likely cause issues due to the overhead of this implementation
 * `JAEGER_SAMPLER_PARAM == 1` - This would be set to a more reasonable number such as `1000` in high-load production systems, which would mean one out of every thousand requests would be recorded
-* `JAEGER_REPORTER_LOG_SPANS == false` - This is a good troubleshooting tool, but logging spans creates additional overhead to stdout
+* `JAEGER_REPORTER_LOG_SPANS == false` - Logs that are emitted during an instrumented span will be logged within the trace. This is great for troubleshooting but adds a lot of overhead.
 * `JAEGER_SERVICE_NAME == {{ .Release.Name }}` - Populates the service name value from the Helm service template
 
 ![Spring Petclinic Helm Chart Review](lab-04/images/img05b.png)
+
+If you're not familiar with Java and Maven projects, `pom.xml` is a manifest file for the project, it includes dependencies, libraries, and other configuration details that are required to compile our micro service applications. In the following change, we've added multiple dependencies which are required to export metrics and tracing data. Let's break down each dependency:
+
+* a. [Micrometer](https://micrometer.io/) - Collects runtime metrics both automatically and manually. Since this is a spring boot application, it will collect metrics such as the number of incoming requests, response status codes (200, 404, etc), and library specific metrics such as RabbitMQ and the number of messages processed, or JDBC and the number of queries executed. You can also instrument specific methods to extract timing details, counts, and other business-like metrics.
+* b. [Micrometer Prometheus Registry](https://github.com/micrometer-metrics/micrometer/tree/master/implementations) - Exports the data collected by Micrometer into a format which can be ingested by Prometheus. There are other registry formats such as Influx, Graphite, and many others.
+* c. [Jaeger Tracing Client](https://github.com/jaegertracing/jaeger-client-java) - Responsible for shipping trace spans and logs to the Jaeger service
+* d. [Spring Cloud Opentracing](https://github.com/opentracing-contrib/java-spring-cloud) - Automatically wraps specific technologies within Spring Boot such as RestTemplate, JDBC, JMS, etc. This is required to capture timing details and meta data around transactions between other services and data systems such as MySQL, Oracle, RabbitMQ. There are dozens of technologies supported within this library - as long as you're using standard approaches to handling requests and data you shouldn't have to worry about manual instrumentation to gather trace context.
+
+![Spring Petclinic Dependencies](lab-04/images/img05c.png)
+
+Once our project has the necessary dependencies we must configure the application to expose those metrics for collection. In this next image we're adding the necessary configuration for Micrometer and Prometheus. This is required for each application we want metrics exposed.
+
+![Metric Configuration](lab-04/images/img05d.png)
+
+We must also bootstrap Opentracing within each application that we want to trace:
+
+![Opentracing Configuration](lab-04/images/img05e.png)
+
+Finally, if we want to collect custom business metrics, we must implement the logic to emit those metrics when requests are made within the application.
+
+![Custom Metrics](lab-04/images/img05f.png)
+
+Now that we've reviewed our code, it's time to merge!
+
+6. Merge the observability changes! Scroll to the top of the merge request and click `Merge`
+
+![Ship It](lab-04/images/img06.png)
+
+7. Update / Deploy both dependencies and services.
+
+In order to apply the changes we've made to both the database and the services, we must run both tasks. Once the `Build` and `Push` tasks have passed, run both the Deploy tasks.
+
+![Deploy It](lab-04/images/img07.png)
+
+In the next lab we'll be deploying the necessary infrastructure to collect, manage, and visualize the observability data our applications are now exporting.
+
+
+
