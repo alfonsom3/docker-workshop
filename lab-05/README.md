@@ -94,10 +94,10 @@ As you switch between `Instance` IP addresses the `pod` name will update accordi
 * Copy the contents of the aforemented JSON file into the JSON field, then click the `Load` button
 * Choose `prometheus` as the prometheus data source, then click the `Import` button
 
-[Import Petclinic Dashboard](lab-05/images/img06a.png)
+![Import Petclinic Dashboard](lab-05/images/img06a.png)
 
 You should now see a mostly empty dashboard! This is because we haven't taken many actions within our demo application. If you head over to the Spring Petclinic app, create some owners and pets, update, create visits, etc. You'll beging to see the values in this dashboard reflect those actions (this is also preparing us for the next application, Jaeger).
 
-[Custom Petclinic Dashboard](lab-05/images/img06b.png)
+![Custom Petclinic Dashboard](lab-05/images/img06b.png)
 
 Let's move onto the final Lab, number 6, where we'll review Jaeger and Alertmanager.
