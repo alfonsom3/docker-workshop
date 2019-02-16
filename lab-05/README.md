@@ -100,4 +100,19 @@ You should now see a mostly empty dashboard! This is because we haven't taken ma
 
 ![Custom Petclinic Dashboard](lab-05/images/img06b.png)
 
-Let's move onto the final Lab, number 6, where we'll review Jaeger and Alertmanager.
+Let's move onto the final task for this lab where we uncover Alertmanager.
+
+7. In this task we'll explore Alertmanager and the Prometheus console. These are stateless dashboards which derive all their settings from the Helm chart and associated configuration. In order to add/configure additional alerts, you'll need to read the documentation for the Prometheus operator. The motivation behind only allowing changes to be applied through manifests is to enforce the concept of "infrastructure as code".
+
+For now, open a browser tab and load the `Alertmanager` dashboard by copying the link provided from the Google terminal. (http://alertmanager.spc.ingress-ip.io).
+
+You can also configure Alertmanager to send alerts to Slack, Pagerduty, and other integrations. If you click on `Source` for any of the alerts, you'll be taken to Prometheus where you can examine the query which triggers the pre-defined alert.
+
+If we click on `Source` for the `TargetDown` alert, we can see that there are a couple matches for this particular query. The purpose of this is to show you how these alerts are defined, via a well-documented query language which is used to build dashboards in Grafana as well.
+
+![Alertmanager](lab-05/images/img07a.png)
+![Prometheus](lab-05/images/img07b.png)
+
+---
+
+In the final lab of this series, we'll investigate distributed tracing with Jaeger and discuss advanced analytics capabilities which can be derived from data gathered via distributed tracing.
