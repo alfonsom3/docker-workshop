@@ -8,19 +8,19 @@ _Note: These steps may vary slightly based on your region / locality. If you've 
 ## Tasks:
 
 - [ ] 1 :: [Create Google Cloud Account](https://gitlab.com/opentracing-workshop/lab-notes/blob/8b7d653b9051122bf8f87376231144ddc5d608b8/lab-01/README.md#create-google-cloud-account)
-  - [ ] 1-1 :: [Create Account](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#11-create-account)
-  - [ ] 1-2 :: [Fill in Details](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#12-fill-in-details)
-  - [ ] 1-3 :: [Fill in More Details](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#13-fill-in-more-details)
-  - [ ] 1-4 :: [Agree to Privacy Terms](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#14-agree-to-privacy-terms)
+  - [ ] 1.1 :: [Create Account](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#11-create-account)
+  - [ ] 1.2 :: [Fill in Details](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#12-fill-in-details)
+  - [ ] 1.3 :: [Fill in More Details](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#13-fill-in-more-details)
+  - [ ] 1.4 :: [Agree to Privacy Terms](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#14-agree-to-privacy-terms)
 - [ ] 2 :: [Redeem and activate $300 credit](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#redeem-and-activate-300-credit)
-  - [ ] 2-1 :: [Activate $300 Credit](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#21-activate-300-credit)
-  - [ ] 2-2 :: [Agree to Terms / Enter Credit Card details](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#22-agree-to-terms-enter-credit-card-details)
+  - [ ] 2.1 :: [Activate $300 Credit](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#21-activate-300-credit)
+  - [ ] 2.2 :: [Agree to Terms / Enter Credit Card details](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#22-agree-to-terms-enter-credit-card-details)
 
 
 Create Google Cloud Account
 ---
 
-### 1.1 - Create Account
+### 1.1 Create Account
 
 > Visit https://console.cloud.google.com and click on `Create account`
 
