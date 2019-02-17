@@ -1,5 +1,5 @@
 Welcome to Lab 04 - Deploy All The Things!
----
+===
 
 In this lab, we will deploy our microservice application and explore some of the tooling available to use to monitor and manage our application out of the box.
 
