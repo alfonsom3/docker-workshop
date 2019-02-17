@@ -103,4 +103,4 @@ Configure CI/CD
 
 ![See Validate Job Run](lab-03/images/img07c.png)
 
-> This job should complete and be successful. If you do not see the `INGRESS_IP` value, and both the server and client versions for `kubectl` **STOP HERE** and raise your hand before moving on to the next lab.
+> This job should complete and be successful. If you do not see the `INGRESS_IP` value, and both the server and client versions for `kubectl` **STOP HERE** and raise your hand before moving on to [Lab 4](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-04#welcome-to-lab-04-deploy-all-the-things).

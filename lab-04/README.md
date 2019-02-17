@@ -5,15 +5,15 @@ In this lab, we will deploy our microservice application and explore some of the
 
 ## Tasks
 
-- [ ] 1 :: Deploy App / Infrastructure Services
-  - [ ] 1.1 :: Deploy Service Dependencies
-  - [ ] 1.2 :: Deploy Microservice Applications
-  - [ ] 1.3 :: Test Drive the Pet Clinic
-- [ ] 2 :: Merge / Deploy Observable Application
-  - [ ] 2.1 :: Discuss Changes and Requirements
-  - [ ] 2.2 :: Create Merge Request
-  - [ ] 2.3 :: Code Review
-  - [ ] 2.4 :: Deploy Changes
+- [ ] 1 :: [Deploy App / Infrastructure Services](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-04#deploy-app-infrastructure-services)
+  - [ ] 1.1 :: [Deploy Service Dependencies](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-04#11-deploy-service-dependencies)
+  - [ ] 1.2 :: [Deploy Microservice Applications](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-04#12-deploy-microservice-applications)
+  - [ ] 1.3 :: [Test Drive the Pet Clinic](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-04#13-test-drive-the-pet-clinic)
+- [ ] 2 :: [Merge / Deploy Observable Application](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-04#merge-deploy-observable-application)
+  - [ ] 2.1 :: [Discuss Changes and Requirements](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-04#21-discuss-changes-and-requirements)
+  - [ ] 2.2 :: [Create Merge Request](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-04#22-create-merge-request)
+  - [ ] 2.3 :: [Code Review](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-04#23-code-review)
+  - [ ] 2.4 :: [Deploy Changes](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-04#24-deploy-changes)
 
 Deploy App / Infrastructure Services
 ---
