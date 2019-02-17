@@ -5,13 +5,13 @@ In this lab we'll be setting up and configuring Google Kubernetes Engine (GKE). 
 
 ## Tasks
 
-- [ ] 1 :: [Setup Kubernetes Cluster]()
-  - [ ] 1.1 :: [Enable Billing]()
-  - [ ] 1.2 :: [Create Cluster]()
-  - [ ] 1.3 :: [Connect to Cloud Shell]()
-  - [ ] 1.4 :: [Kubernetes Admin Credentials]()
-  - [ ] 1.5 :: [Modify Kube Config]()
-- [ ] 2 :: [Configure Kubernetes Cluster]()
+- [ ] 1 :: [Setup Kubernetes Cluster](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-02#setup-kubernetes-cluster)
+  - [ ] 1.1 :: [Enable Billing](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-02#11-enable-billing)
+  - [ ] 1.2 :: [Create Cluster](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-02#12-create-cluster)
+  - [ ] 1.3 :: [Connect to Cloud Shell](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-02#13-connect-to-cloud-shell)
+  - [ ] 1.4 :: [Kubernetes Admin Credentials](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-02#14-kubernetes-admin-credentials)
+  - [ ] 1.5 :: [Modify Kube Config](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-02#15-modify-kube-config)
+- [ ] 2 :: [Configure Kubernetes Cluster](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-02#configure-kubernetes-cluster)
   - [ ] 2.1 :: [Setup Cluster]()
   - [ ] 2.2 :: [Export Gitlab Credentials]()
 
@@ -112,7 +112,7 @@ Server Version: version.Info{Major:"1", Minor:"11+", GitVersion:"v1.11.6-gke.2",
 Configure Kubernetes Cluster
 ---
 
-### 1.1 Setup Cluster
+### 2.1 Setup Cluster
 
 > Once you've confirmed that the modifications to `~/.kube/config` are valid, you can run the [cluster setup script](https://gitlab.com/opentracing-workshop/build-tools/blob/master/bin/setup-cluster). Run the following command in the Cloud Shell window: `docker run --rm -it -v "$HOME/.kube:/root/.kube" registry.gitlab.com/opentracing-workshop/build-tools:latest setup-cluster`. This script will take 2-3 minutes to complete, do not close the window or interrupt the script during the execution. If you encounter an error, stop here and raise your hand.
 >
@@ -120,7 +120,7 @@ Configure Kubernetes Cluster
 
 ![Cluster Setup Success](lab-02/images/img07.png)
 
-### 1.2 Export Gitlab Credentials
+### 2.2 Export Gitlab Credentials
 
 > For the final task in this lab, we'll be exporting keys and tokens that Gitlab will use to configure and ship our microservice applications. The next command you'll run is: `docker run --rm -it -v "$HOME/.kube:/root/.kube" registry.gitlab.com/opentracing-workshop/build-tools:latest get-gitlab-settings deploy --namespace=spc > gitlab-creds.txt`
 > 
@@ -132,7 +132,7 @@ Configure Kubernetes Cluster
 
 ![Gitlab Creds](lab-02/images/img08.png)
 
-> ##### That's it for Lab 2, in the next lab we'll be setting up Gitlab and deploying our first microservice application.
+> ##### That's it for this lab, in Lab 3 we'll be setting up Gitlab and deploying our first microservice application.
 
 @todo - Add link to next lab
 

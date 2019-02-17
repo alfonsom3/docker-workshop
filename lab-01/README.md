@@ -60,8 +60,6 @@ Redeem and Activate $300 Credit
 ![Agree to Terms](lab-01/images/img06.png)
 ![Fill in Credit Card Details](lab-01/images/img06a.png)
 
-> ##### You're ready to get started with Lab 02 where we'll setup Google Kubernetes Engine (GKE)
+> ##### You're ready to get started with [Lab 02](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-02#welcome-to-lab-02-kubernetes-setup) where we'll setup Google Kubernetes Engine (GKE)
 
 ![Let's Go](lab-01/images/img07.png)
-
-@todo - Add link to next lab
