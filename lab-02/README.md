@@ -132,9 +132,7 @@ Configure Kubernetes Cluster
 
 ![Gitlab Creds](lab-02/images/img08.png)
 
-> ##### That's it for this lab, in Lab 3 we'll be setting up Gitlab and deploying our first microservice application.
-
-@todo - Add link to next lab
+> ##### That's it for this lab, in [Lab 3](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#welcome-to-lab-03-gitlab-and-repository-setup) we'll be setting up Gitlab and deploying our first microservice application.
 
 
 

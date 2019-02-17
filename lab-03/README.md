@@ -5,13 +5,13 @@ In this lab we'll be setting up Gitlab, copying and configuring our repository, 
 
 ## Tasks
 
-- [ ] 1 :: Setup Application Repository
-  - [ ] 1.1 :: Sign Up / Login to Gitlab
-  - [ ] 1.2 :: Create New Project
-- [ ] 2 :: Configure CI/CD
-  - [ ] 2.1 :: Setup Environment Variables
-  - [ ] 2.2 :: Configure Kubernetes Integration
-  - [ ] 2.3 :: Run Pipeline Validation
+- [ ] 1 :: [Setup Application Repository](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#setup-application-repository)
+  - [ ] 1.1 :: [Sign Up / Login to Gitlab](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#11-sign-up-login-to-gitlab)
+  - [ ] 1.2 :: [Create New Project](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#12-create-new-project)
+- [ ] 2 :: [Configure CI/CD](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#configure-cicd)
+  - [ ] 2.1 :: [Setup Environment Variables](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#21-setup-environment-variables)
+  - [ ] 2.2 :: [Configure Kubernetes Integration](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#22-configure-kubernetes-integration)
+  - [ ] 2.3 :: [Run Pipeline Validation](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#23-run-pipeline-validation)
 
 Setup Application Repository
 ---
