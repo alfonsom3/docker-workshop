@@ -5,17 +5,17 @@ In this lab we must now provide the infrastructure necessary to collect, manage,
 
 Tasks:
 
-- [ ] 1 :: [Setup Monitoring Systems]()
-  - [ ] 1.1 :: [Discuss Requirements]()
-  - [ ] 1.2 :: [Spring Boot Admin Refresh]()
-  - [ ] 1.3 :: [Deploy Monitoring Infrastructure]()
-- [ ] 2 :: [Using Grafana]()
-  - [ ] 2.1 :: [Login to Grafana]()
-  - [ ] 2.2 :: [Add Micrometer Dashboard]()
-  - [ ] 2.3 :: [Add MySQL Dashboard]()
-  - [ ] 2.4 :: [Add Custom SPC Dashboard]()
-- [ ] 3 :: [Discover Alertmanager]()
-  - [ ] 3.1 :: [Alertmanager Overview]()
+- [ ] 1 :: [Setup Monitoring Systems](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-05#setup-monitoring-systems)
+  - [ ] 1.1 :: [Discuss Requirements](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-05#11-discuss-requirements)
+  - [ ] 1.2 :: [Spring Boot Admin Refresh](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-05#12-spring-boot-admin-refresh)
+  - [ ] 1.3 :: [Deploy Monitoring Infrastructure](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-05#13-deploy-monitoring-infrastructure)
+- [ ] 2 :: [Using Grafana](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-05#using-grafana)
+  - [ ] 2.1 :: [Login to Grafana](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-05#21-login-to-grafana)
+  - [ ] 2.2 :: [Add Micrometer Dashboard](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-05#22-add-micrometer-dashboard)
+  - [ ] 2.3 :: [Add MySQL Dashboard](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-05#23-add-mysql-dashboard)
+  - [ ] 2.4 :: [Add Custom SPC Dashboard](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-05#24-add-custom-spc-dashboard)
+- [ ] 3 :: [Discover Alertmanager](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-05#discover-alertmanager)
+  - [ ] 3.1 :: [Alertmanager Overview](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-05#31-alertmanager-overview)
 
 Setup Monitoring Systems
 ---
