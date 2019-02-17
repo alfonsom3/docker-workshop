@@ -12,8 +12,8 @@ In this lab we'll be setting up and configuring Google Kubernetes Engine (GKE). 
   - [ ] 1.4 :: [Kubernetes Admin Credentials](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-02#14-kubernetes-admin-credentials)
   - [ ] 1.5 :: [Modify Kube Config](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-02#15-modify-kube-config)
 - [ ] 2 :: [Configure Kubernetes Cluster](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-02#configure-kubernetes-cluster)
-  - [ ] 2.1 :: [Setup Cluster]()
-  - [ ] 2.2 :: [Export Gitlab Credentials]()
+  - [ ] 2.1 :: [Setup Cluster](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-02#21-setup-cluster)
+  - [ ] 2.2 :: [Export Gitlab Credentials](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-02#22-export-gitlab-credentials)
 
 Setup Kubernetes Cluster
 ---
