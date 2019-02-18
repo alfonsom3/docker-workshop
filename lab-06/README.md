@@ -5,14 +5,14 @@ In this lab we will dive in and begin to understand the visualizations in Jaeger
 
 Tasks:
 
-- [ ] 1 :: Explore Jaeger
-  - [ ] 1.1 :: Finding Traces
-  - [ ] 1.2 :: Understanding Traces
-  - [ ] 1.3 :: Analyzing Calls 
-- [ ] 2 :: Advanced Use Cases
-  - [ ] 2.1 :: Single Music Overview
-  - [ ] 2.2 :: Screenshotpalooza
-- [ ] 3 :: Vendor Solution Overview
+- [ ] 1 :: [Explore Jaeger](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-06#explore-jaeger)
+  - [ ] 1.1 :: [Finding Traces](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-06#11-finding-traces)
+  - [ ] 1.2 :: [Understanding Traces](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-06#12-understanding-traces)
+  - [ ] 1.3 :: [Analyzing Calls](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-06#13-analyzing-calls)
+- [ ] 2 :: [Advanced Use Cases](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-06#advanced-use-cases-with-distributed-tracing-analytics)
+  - [ ] 2.1 :: [Single Music Overview](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-06#21-single-music-overview)
+  - [ ] 2.2 :: [Screenshotpalooza](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-06#22-screenshotapoolza)
+- [ ] 3 :: [Vendor Solution Overview](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-06#vendor-solution-overview)
 
 Explore Jaeger
 ---
@@ -53,12 +53,10 @@ Advanced Use Cases (with Distributed Tracing analytics)
 ### 2.1 Single Music Overview
 
 > Now that we've covered some basics, we'll dive into some advanced use cases supplied through the Instana APM tool. The reason I'm using this tool for examples:
->  
-> * I operate and manage a small microservice application (around 20 services) for Single Music - a small startup that I launched with two friends, and I monitor it with Instana. It's been in operation for a year, and I've collected **a lot** of screenshots / use cases.
-> * Current Open Source technologies do not offer the deep analytic capabilities I'm about to discuss; Jaeger is starting to > build some of these capabilities out (and in some cases they're building features which aren't yet available in Instana).
-> * Our team is really small, we don't have the time or budget to maintain our own monitoring solution. Running multiple solutions is also not in our budget. 
-
-> There are several vendors today which can provide similar functionality, and what it boils down to is your budget, technology requirements, and enterprise-ready requirements (on-premise, multi-tenant, saml, etc). I'll mention what I consider industry leaders in this space near the end of our lab. If you're considering utilizing this technology in your stack you should be prepared to do several proof of concepts and do quite a bit of research.
+  
+* I operate and manage a small microservice application (around 20 services) for Single Music - a small startup that I launched with two friends, and I monitor it with Instana. It's been in operation for a year, and I've collected **a lot** of screenshots / use cases.
+* Current Open Source technologies do not offer the deep analytic capabilities I'm about to discuss; Jaeger is starting to > build some of these capabilities out (and in some cases they're building features which aren't yet available in Instana).
+* Our team is really small, we don't have the time or budget to maintain our own monitoring solution. Running multiple solutions is also not in our budget. 
 
 ### 2.2 Screenshotapoolza
 
@@ -68,6 +66,8 @@ Vendor Solution Overview
 ---
 
 Vendor Solutions that offer Distributed Tracing solutions (and more)
+
+There are several vendors today which can provide similar functionality, and what it boils down to is your budget, technology requirements, and enterprise-ready requirements (on-premise, multi-tenant, saml, etc). I'll mention what I consider industry leaders in this space. If you're considering utilizing this technology in your stack you should be prepared to do several proof of concepts and quite a bit of research.
 
 * [Instana](https://instana.com) <-- Caveat: I work here, and that's why it's #1 on the list
 * [DataDog](https://datadog.com)

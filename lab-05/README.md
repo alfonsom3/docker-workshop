@@ -152,4 +152,4 @@ If you click on `Source` for the `TargetDown` alert, we can see that there are a
 
 ---
 
-In Lab 6, the final lab of this series, we'll investigate distributed tracing with Jaeger and discuss advanced analytics capabilities which can be derived from data gathered via distributed tracing.
+In [Lab 6](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-06#welcome-to-lab-06-observe-it), the final lab of this series, we'll investigate distributed tracing with Jaeger and discuss advanced analytics capabilities which can be derived from data gathered via distributed tracing.
