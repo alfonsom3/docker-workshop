@@ -1,4 +1,4 @@
-Welcome to Lab 05 - Observe It!
+Welcome to Lab 05 - Monitor It!
 ===
 
 In this lab we must now provide the infrastructure necessary to collect, manage, and visualize the observability data (metrics and traces) that our applications are now emitting.
