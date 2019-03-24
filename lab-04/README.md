@@ -80,6 +80,10 @@ Merge / Deploy Observable Application
 ![Create Merge Request](lab-04/images/img04.png)
 ![Submit Merge Request](lab-04/images/img04a.png)
 
+> Merge the observability changes! We will be reviewing the code as these changes are being built and pushed to the docker repository. Click `Merge`
+
+![Ship It](lab-04/images/img06.png)
+
 ### 2.3 Code Review
 
 > Click on the `Changes (n)` tab to reveal the modifications we're making to our microservice application. There are a number of duplicated changes we won't be covering, but we will go into detail on each unique change and explain what we're doing to enable our applications for observability.
@@ -129,15 +133,11 @@ Merge / Deploy Observable Application
 
 ### 2.4 Deploy Changes
 
-> Merge the observability changes! Scroll to the top of the merge request and click `Merge`
-
-![Ship It](lab-04/images/img06.png)
-
-> In order to apply the changes we've made to both the database and the services, we must run both tasks. Once the `Build` and `Push` tasks have passed, run both the Deploy tasks.
+> In order to apply the changes we've made to both the database and the services, we must run both deployment tasks. Once the `Build` and `Push` tasks have passed, run both the Deploy tasks.
 
 ![Deploy It](lab-04/images/img07.png)
 
-> In the next lab we'll be deploying the necessary infrastructure to collect, manage, and visualize the observability data our applications are now exporting.
+> In the [next lab](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-05#welcome-to-lab-05-monitor-it) we'll be deploying the necessary infrastructure to collect, manage, and visualize the telemetry and contextual data our applications are now emitting.
 
 
 
