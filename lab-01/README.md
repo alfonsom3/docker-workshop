@@ -1,65 +1,80 @@
-Welcome to Lab 01 - Google Cloud Sign-Up
+Welcome to Lab 01 - Docker EE setup
 ===
 
-In this lab, we'll sign up with Google Cloud Platform (GCP) for this workshop. You should sign up for a new account and utilize the $300 credit. Only new accounts can be supported by the workshop instructors as pre-existing accounts may have security or other restrictions which may otherwise prevent you from completing this workshop.
-
-_Note: These steps may vary slightly based on your region / locality. If you've already completed this step, feel free to skip to the next lab!_
+In this lab, we'll get started with the Docker EE labs and setup our cluster so we can begin deploying our microservice application along with our observability tooling.
 
 ## Tasks:
 
-- [ ] 1 :: [Create Google Cloud Account](https://gitlab.com/opentracing-workshop/lab-notes/blob/8b7d653b9051122bf8f87376231144ddc5d608b8/lab-01/README.md#create-google-cloud-account)
-  - [ ] 1.1 :: [Create Account](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#11-create-account)
-  - [ ] 1.2 :: [Fill in Details](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#12-fill-in-details)
-  - [ ] 1.3 :: [Fill in More Details](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#13-fill-in-more-details)
-  - [ ] 1.4 :: [Agree to Privacy Terms](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#14-agree-to-privacy-terms)
-- [ ] 2 :: [Redeem and activate $300 credit](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#redeem-and-activate-300-credit)
-  - [ ] 2.1 :: [Activate $300 Credit](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#21-activate-300-credit)
-  - [ ] 2.2 :: [Agree to Terms / Enter Credit Card details](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-01#22-agree-to-terms-enter-credit-card-details)
+- [ ] 1 :: [Launch EE labs]()
+  - [ ] 1.1 :: [Fill in Details]()
+- [ ] 2 :: [Configure the Cluster]()
+  - [ ] 2.1 :: [Download K8S credentials]()
+  - [ ] 2.1 :: [Setup Namespaces and Helm]()
+  - [ ] 2.2 :: [Export Gitlab Credentials]()
 
 
-Create Google Cloud Account
+Launch EE labs
 ---
 
-### 1.1 Create Account
+### 1.1 Fill in Details
 
-> Visit https://console.cloud.google.com and click on `Create account`
+> Visit https://ee-labs.play-with-docker.com
 
-![Create Account](lab-01/images/img01.png)
+![Fill in Details](lab-01/images/img01.png)
 
-### 1.2 Fill in Details
+> Click `Submit` once you've completed the form
 
-> Be sure to use a valid email address which hasn't been used to sign up for GCP in the past.
-
-![Fill in Details](lab-01/images/img02.png)
-
-### 1.3 Fill in more Details
-
-> Enter your phone number and personal details (don't worry, Google says they're private & safe). Google will send a validation code to the phone number you provide.
-
-![Enter Phone Number](lab-01/images/img03.png)
-![Verify Phone Number](lab-01/images/img03a.png)
-
-### 1.4 Agree to Privacy Terms
-
-![Agree To Deliver Firstborn Child](lab-01/images/img04.png)
-![Agree To Deliver Second Child](lab-01/images/img04a.png)
-
-Redeem and Activate $300 Credit
+Configure the Cluster
 ---
 
-### 2.1 Activate $300 credit
+### 2.1 Configure Docker EE to run K8S workloads
 
-> Click the activate button for a $300 credit to your account
+We need to tell Docker EE that it's permissable to schedule Kubernetes workloads on all the nodes, by default the K8S scheduler is turned off on most worker nodes because it induces additional overhead that non-k8s workloads shouldn't have to endure. However, because this is solely a K8S workshops, we need to update the nodes.
 
-![Activate Credit](lab-01/images/img05.png)
+> Click on manager1 in the left panel, press enter to see the command prompt, then paste the following command:
 
-### 2.2 Agree to Terms / Enter Credit Card details
+```
+curl -Ls https://bit.ly/2DcQhRz | bash
+```
 
-> Fill in details for the $300 free credit
+![Configure Nodes](lab-02/images/img02a.png)
 
-![Agree to Terms](lab-01/images/img06.png)
-![Fill in Credit Card Details](lab-01/images/img06a.png)
+### 2.2 Setup Namespaces and Helm
 
-> ##### You're ready to get started with [Lab 02](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-02#welcome-to-lab-02-kubernetes-setup) where we'll setup Google Kubernetes Engine (GKE)
+We will need to export a variable which will be used for multiple deployments during this exercise,this variable will allow us to contact the UCP (Universal Control Plane) to obtain a K8S cluster, and it'll also be used later in the exercise to configure the nginx ingress control so we can access the various services we'll be deploying.
 
-![Let's Go](lab-01/images/img07.png)
+> Underneath the terminal in your browser we see Session Information, we need to copy the value in _UCP Hostname_ into the terminal and set the `UCP_HOSTNAME` variable using the following command:
+
+```
+export UCP_HOSTNAME=<paste hostname here>
+```
+
+![Export Hostname](lab-02/images/img02b.png)
+
+The next script will setup up our application namespace, called `spc`, configure RBAC for that namespace, so when we provide credentials to gitlab we aren't giving access to the entire cluster. This could be considered a best practice for security. Going over all the different RBAC controls we are configuring is outside of the scope of this workshop - but you can always go back later and investigate the script we are running.
+
+We are also configuring our root namespace so we can install an nginx ingress controller and monitor tooling. The nginx ingress controller allows us to setup a proxy that will route requests for each of the services we deploy later. 
+
+> While still on the manager1 node paste the following command:
+
+```
+docker run --rm -it \
+  -e "UCP_HOSTNAME=$UCP_HOSTNAME" \
+  registry.gitlab.com/opentracing-workshop/ee-build-tools:latest \
+  setup-cluster
+```
+
+![Setup Cluster](lab-01/images/img02c.png)
+
+> Next, we need to fetch the configuration settings that we are going to put into gitlab in the next lab exercise. This will allow gitlab to deploy **ONLY** to the `spc` namespace. It is recommended you copy and paste the entire output into a code editor on your desktop. (Note: Do not use OSX notes as it might autocorrect/format your text)
+
+```
+docker run --rm -it \
+  -e "UCP_HOSTNAME=$UCP_HOSTNAME" \
+  registry.gitlab.com/opentracing-workshop/ee-build-tools:latest \
+  get-gitlab-settings deploy
+```
+
+![Gitlab Settings](lab-01/images/img02d.png)
+
+> ##### That's it for this lab, in [Lab 2]() we'll be setting up Gitlab and deploying our first microservice application.
