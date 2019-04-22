@@ -5,15 +5,15 @@ In this lab, we will deploy our microservice application and explore some of the
 
 ## Tasks
 
-- [ ] 1 :: [Deploy App / Infrastructure Services](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#deploy-app-infrastructure-services)
-  - [ ] 1.1 :: [Deploy Service Dependencies](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#11-deploy-service-dependencies)
-  - [ ] 1.2 :: [Deploy Microservice Applications](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#12-deploy-microservice-applications)
-  - [ ] 1.3 :: [Test Drive the Pet Clinic](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#13-test-drive-the-pet-clinic)
-- [ ] 2 :: [Merge / Deploy Observable Application](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#merge-deploy-observable-application)
-  - [ ] 2.1 :: [Discuss Changes and Requirements](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#21-discuss-changes-and-requirements)
-  - [ ] 2.2 :: [Create Merge Request](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#22-create-merge-request)
-  - [ ] 2.3 :: [Code Review](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#23-code-review)
-  - [ ] 2.4 :: [Deploy Changes](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-03#24-deploy-changes)
+- [ ] 1 :: [Deploy App / Infrastructure Services]()
+  - [ ] 1.1 :: [Deploy Service Dependencies]()
+  - [ ] 1.2 :: [Deploy Microservice Applications]()
+  - [ ] 1.3 :: [Test Drive the Pet Clinic]()
+- [ ] 2 :: [Merge / Deploy Observable Application]()
+  - [ ] 2.1 :: [Discuss Changes and Requirements]()
+  - [ ] 2.2 :: [Create Merge Request]()
+  - [ ] 2.3 :: [Code Review]()
+  - [ ] 2.4 :: [Deploy Changes]()
 
 Deploy App / Infrastructure Services
 ---
@@ -50,7 +50,7 @@ During the build process, we generated a `modules.info` file from `pom.xml`, whi
 > * Click the last bubble in the stages column
 > * Next click the _Play_ button next to `deploy-services`
 >
-> You can watch this job run in real time by clicking on `deploy-services` after you've clicked `Play`. This job will take a few minutes to run, but once it's done move onto the next step!
+> We can watch this job run in real time by clicking on `deploy-services` after you've clicked `Play`. This job will take a few minutes to run, but once it's done move onto the next step!
 
 ![Deploy Services](/lab-03/images/img02.png)
 
@@ -103,7 +103,7 @@ The first change you should see is to the `helm/spring-petclinic-database-server
 * a. [Helm Repository - MySQL](https://github.com/helm/charts/tree/master/stable/mysql) - We're configuring MySQL to run a [sidecar pod](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/) that will collect metrics from MySQL and export them via a prometheus endpoint.
 * b. This is the magic sauce in the [prometheus operator](https://github.com/coreos/prometheus-operator). This annotation tells prometheus that it should collect metrics from this service.
 
-![MySQL Helm Review](lab-03/images/img05a.png)
+![MySQL Helm Review](/lab-03/images/img05a.png)
 
 The next change we'll be reviewing is to the `helm/spring-petclinic-kubernetes/templates/deployment.yaml` manifest. This manifest is used across all the spring petclinic microservices, which is the real power behind helm since it can be used to reduce config duplication.
  
@@ -148,7 +148,7 @@ Now that we've reviewed our code, it's time to merge!
 
 ![Deploy It](/lab-03/images/img07.png)
 
-In the [next lab](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-04#welcome-to-lab-04-monitor-it) we'll be deploying the necessary infrastructure to collect, manage, and visualize the telemetry and contextual data our applications are now emitting.
+In the [Lab 04]() we'll be deploying the necessary infrastructure to collect, manage, and visualize the telemetry and contextual data our applications are now emitting.
 
 
 

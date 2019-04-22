@@ -20,7 +20,7 @@ Launch EE labs
 
 > Visit https://ee-labs.play-with-docker.com
 
-![Fill in Details](lab-01/images/img01.png)
+![Fill in Details](/lab-01/images/img01.png)
 
 > Click `Submit` once you've completed the form
 
@@ -37,7 +37,7 @@ We need to tell Docker EE that it's permissable to schedule Kubernetes workloads
 curl -Ls https://bit.ly/2DcQhRz | bash
 ```
 
-![Configure Nodes](lab-02/images/img02a.png)
+![Configure Nodes](/lab-01/images/img02a.png)
 
 ### 2.2 Setup Namespaces and Helm
 
@@ -49,7 +49,7 @@ We will need to export a variable which will be used for multiple deployments du
 export UCP_HOSTNAME=<paste hostname here>
 ```
 
-![Export Hostname](lab-02/images/img02b.png)
+![Export Hostname](/lab-01/images/img02b.png)
 
 The next script will setup up our application namespace, called `spc`, configure RBAC for that namespace, so when we provide credentials to gitlab we aren't giving access to the entire cluster. This could be considered a best practice for security. Going over all the different RBAC controls we are configuring is outside of the scope of this workshop - but you can always go back later and investigate the script we are running.
 
@@ -64,9 +64,11 @@ docker run --rm -it \
   setup-cluster
 ```
 
-![Setup Cluster](lab-01/images/img02c.png)
+![Setup Cluster](/lab-01/images/img02c.png)
 
-> Next, we need to fetch the configuration settings that we are going to put into gitlab in the next lab exercise. This will allow gitlab to deploy **ONLY** to the `spc` namespace. It is recommended you copy and paste the entire output into a code editor on your desktop. (Note: Do not use OSX notes as it might autocorrect/format your text)
+Next, we need to fetch the configuration settings that we are going to put into gitlab in the next lab exercise. This will allow gitlab to deploy **ONLY** to the `spc` namespace. It is recommended you copy and paste the entire output into a code editor on your desktop. (Note: Do not use OSX notes as it might autocorrect/format your text)
+
+> While on the manager1 node paste the following command:
 
 ```
 docker run --rm -it \
@@ -75,6 +77,6 @@ docker run --rm -it \
   get-gitlab-settings deploy
 ```
 
-![Gitlab Settings](lab-01/images/img02d.png)
+![Gitlab Settings](/lab-01/images/img02d.png)
 
-> ##### That's it for this lab, in [Lab 2]() we'll be setting up Gitlab and deploying our first microservice application.
+That's it for this lab, in [Lab 2]() we'll be setting up Gitlab and deploying our first microservice application.

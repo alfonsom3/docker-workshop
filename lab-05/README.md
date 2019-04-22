@@ -5,10 +5,10 @@ In this lab we will dive in and begin to understand the visualizations in Jaeger
 
 Tasks:
 
-- [ ] 1 :: [Explore Jaeger](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-06#explore-jaeger)
-  - [ ] 1.1 :: [Finding Traces](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-06#11-finding-traces)
-  - [ ] 1.2 :: [Understanding Traces](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-06#12-understanding-traces)
-  - [ ] 1.3 :: [Analyzing Calls](https://gitlab.com/opentracing-workshop/lab-notes/tree/master/lab-06#13-analyzing-calls)
+- [ ] 1 :: [Explore Jaeger]()
+  - [ ] 1.1 :: [Finding Traces]()
+  - [ ] 1.2 :: [Understanding Traces]()
+  - [ ] 1.3 :: [Analyzing Calls]()
 
 Explore Jaeger
 ---
@@ -44,4 +44,4 @@ Distributed Tracing gives you visibility into large, complex microservice enviro
 
 Next up, we'll take a look at how quickly this application can be instrumented utilizing the same tooling that monitors Single Music, the application we briefly discussed in the intro slide deck.
 
-We'll then wrap up our discussion and summarize all we've learned today.
+We'll then wrap up and summarize all we've learned today in [Lab 06]().
