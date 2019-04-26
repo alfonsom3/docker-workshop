@@ -5,17 +5,17 @@ In this lab we must now provide the infrastructure necessary to collect, manage,
 
 Tasks:
 
-- [ ] 1 :: [Setup Monitoring Systems]()
-  - [ ] 1.1 :: [Discuss Requirements]()
-  - [ ] 1.2 :: [Spring Boot Admin Refresh]()
-  - [ ] 1.3 :: [Deploy Monitoring Infrastructure]()
-- [ ] 2 :: [Using Grafana]()
-  - [ ] 2.1 :: [Login to Grafana]()
-  - [ ] 2.2 :: [Add Micrometer Dashboard]()
-  - [ ] 2.3 :: [Add MySQL Dashboard]()
-  - [ ] 2.4 :: [Add Custom SPC Dashboard]()
-- [ ] 3 :: [Discover Alertmanager]()
-  - [ ] 3.1 :: [Alertmanager Overview]()
+- [ ] 1 :: [Setup Monitoring Systems](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-04#setup-monitoring-systems)
+  - [ ] 1.1 :: [Discuss Requirements](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-04#11-discuss-requirements)
+  - [ ] 1.2 :: [Spring Boot Admin Refresh](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-04#12-spring-boot-admin-refresh)
+  - [ ] 1.3 :: [Deploy Monitoring Infrastructure](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-04#13-deploy-monitoring-infrastructure)
+- [ ] 2 :: [Using Grafana](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-04#using-grafana)
+  - [ ] 2.1 :: [Login to Grafana](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-04#21-login-to-grafana)
+  - [ ] 2.2 :: [Add Micrometer Dashboard](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-04#22-add-micrometer-dashboard)
+  - [ ] 2.3 :: [Add MySQL Dashboard](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-04#23-add-mysql-dashboard)
+  - [ ] 2.4 :: [Add Custom SPC Dashboard](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-04#24-add-custom-spc-dashboard)
+- [ ] 3 :: [Discover Alertmanager](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-04#discover-alertmanager)
+  - [ ] 3.1 :: [Alertmanager Overview](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-04#31-alertmanager-overview)
 
 Setup Monitoring Systems
 ---
@@ -157,4 +157,4 @@ If you click on `Source` for the `TargetDown` alert, we can see that there are a
 
 ---
 
-In [Lab 5]() we'll investigate distributed tracing with Jaeger and discuss advanced analytics capabilities which can be derived from data gathered via distributed tracing.
+In [Lab 5](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-05#welcome-to-lab-05-observe-it) we'll investigate distributed tracing with Jaeger and discuss advanced analytics capabilities which can be derived from data gathered via distributed tracing.

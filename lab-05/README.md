@@ -5,10 +5,10 @@ In this lab we will dive in and begin to understand the visualizations in Jaeger
 
 Tasks:
 
-- [ ] 1 :: [Explore Jaeger]()
-  - [ ] 1.1 :: [Finding Traces]()
-  - [ ] 1.2 :: [Understanding Traces]()
-  - [ ] 1.3 :: [Analyzing Calls]()
+- [ ] 1 :: [Explore Jaeger](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-05#explore-jaeger)
+  - [ ] 1.1 :: [Finding Traces](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-05#11-finding-traces)
+  - [ ] 1.2 :: [Understanding Traces](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-05#12-understanding-traces)
+  - [ ] 1.3 :: [Analyzing Calls](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-05#13-analyzing-calls)
 
 Explore Jaeger
 ---

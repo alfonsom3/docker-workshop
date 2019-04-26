@@ -5,12 +5,12 @@ In this lab, we'll get started with the Docker EE labs and setup our cluster so 
 
 ## Tasks:
 
-- [ ] 1 :: [Launch EE labs]()
-  - [ ] 1.1 :: [Fill in Details]()
-- [ ] 2 :: [Configure the Cluster]()
-  - [ ] 2.1 :: [Download K8S credentials]()
-  - [ ] 2.1 :: [Setup Namespaces and Helm]()
-  - [ ] 2.2 :: [Export Gitlab Credentials]()
+- [ ] 1 :: [Launch EE labs](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-01#launch-ee-labs)
+  - [ ] 1.1 :: [Fill in Details](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-01#11-fill-in-details)
+- [ ] 2 :: [Configure the Cluster](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-01#configure-the-cluster)
+  - [ ] 2.1 :: [Configure EE to run K8S workloads](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-01#21-configure-docker-ee-to-run-k8s-workloads)
+  - [ ] 2.2 :: [Setup Namespaces and Helm](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-01#22-setup-namespaces-and-helm)
+  - [ ] 2.3 :: [Export Gitlab Credentials](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-01#23-export-gitlab-credentials)
 
 
 Launch EE labs
@@ -66,6 +66,8 @@ docker run --rm -it \
 
 ![Setup Cluster](/lab-01/images/img02c.png)
 
+## 2.3 Export Gitlab Credentials
+
 Next, we need to fetch the configuration settings that we are going to put into gitlab in the next lab exercise. This will allow gitlab to deploy **ONLY** to the `spc` namespace. It is recommended you copy and paste the entire output into a code editor on your desktop. (Note: Do not use OSX notes as it might autocorrect/format your text)
 
 > While on the manager1 node paste the following command:
@@ -79,4 +81,4 @@ docker run --rm -it \
 
 ![Gitlab Settings](/lab-01/images/img02d.png)
 
-That's it for this lab, in [Lab 2]() we'll be setting up Gitlab and deploying our first microservice application.
+That's it for this lab, in [Lab 2](https://gitlab.com/opentracing-workshop/ee-lab-notes/tree/master/lab-02#welcome-to-lab-02-gitlab-and-repository-setup) we'll be configuring Gitlab and deploying the first version of our microservice application.
