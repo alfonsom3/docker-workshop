@@ -18,7 +18,7 @@ Launch EE labs
 
 ### 1.1 Fill in Details
 
-> Visit https://ee-labs.play-with-docker.com
+> Visit https://ee-workshop.play-with-docker.com
 
 ![Fill in Details](/lab-01/images/img01.png)
 
